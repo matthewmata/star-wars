@@ -1,7 +1,16 @@
+const combineData = require("./utils/combine-data");
+
 module.exports = {
+  getFilms: async (req, res) => {
+    const data = await combineData("https://swapi.dev/api/films/");
+    try {
+      res.status(200).send(data);
+    } catch (err) {
+      res.status(400).send(err);
+    }
+  },
   getPeople: async (req, res) => {
-    const response = await fetch("https://swapi.dev/api/people/");
-    const data = await response.json();
+    const data = await combineData("https://swapi.dev/api/people/");
     try {
       res.status(200).send(data);
     } catch (err) {
@@ -9,8 +18,7 @@ module.exports = {
     }
   },
   getPlanets: async (req, res) => {
-    const response = await fetch("https://swapi.dev/api/planets/");
-    const data = await response.json();
+    const data = await combineData("https://swapi.dev/api/planets/");
     try {
       res.status(200).send(data);
     } catch (err) {
@@ -18,8 +26,7 @@ module.exports = {
     }
   },
   getVehicles: async (req, res) => {
-    const response = await fetch("https://swapi.dev/api/vehicles/");
-    const data = await response.json();
+    const data = await combineData("https://swapi.dev/api/vehicles/");
     try {
       res.status(200).send(data);
     } catch (err) {
@@ -27,8 +34,7 @@ module.exports = {
     }
   },
   getStarship: async (req, res) => {
-    const response = await fetch("https://swapi.dev/api/starships/");
-    const data = await response.json();
+    const data = await combineData("https://swapi.dev/api/starships/");
     try {
       res.status(200).send(data);
     } catch (err) {
