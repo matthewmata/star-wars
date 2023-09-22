@@ -3,7 +3,7 @@
 
 // thoughts of reindexing since vehicles are fully filled out in API
 const combineData = async (url) => {
-  const combinedData = {};
+  const combinedData = [];
   while (url !== null) {
     const response = await fetch(url);
     const data = await response.json();

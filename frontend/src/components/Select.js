@@ -7,15 +7,12 @@ const Select = ({ people, films, setSeenTogether }) => {
 
   useEffect(() => {
     if (character1 && character2) {
-        console.log(people[character1], people[character2]);
-        // console.log(films);
         const sameFilms = compareCharacters(
           people[character1],
           people[character2],
           films
         );
-        console.log(sameFilms);
-        // setSeenTogether(sameFilms);
+        setSeenTogether(sameFilms);
     }
   }, [character1, character2]);
 
