@@ -21,7 +21,7 @@ const selectSlice = createSlice({
     },
     charactersCompared(state, action) {
       const { character1 , character2 } = action.payload;
-      const sameFilms = compare(state.people[character1], state.people[character2], state.films);
+      const sameFilms = compare(character1, character2, state.films);
       state.sameFilms = sameFilms;
     }
   },

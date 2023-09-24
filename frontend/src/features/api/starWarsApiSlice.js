@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const starWarsApi = createApi({
-  reducerPath: 'starWarsApi',
+  reducerPath: "starWarsApi",
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:5000",
   }),
@@ -11,6 +11,11 @@ export const starWarsApi = createApi({
     }),
     getPeople: build.query({
       query: () => "/api/star-wars/people",
+      // transformResponse: (responseData) => {
+      //   return responseData.map((character) => {
+      //     character.image = "test image";
+      //   });
+      // },
     }),
   }),
 });

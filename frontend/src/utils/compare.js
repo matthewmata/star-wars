@@ -1,6 +1,10 @@
 // compareCharacter checks if the two have shared a planet, starship or vehicle before, and returns an object with the movie(s) names where such interactions occurred
 
 export const compare = (character1, character2, films) => {
+  if (character1 === character2) {
+    return `You chose ${character1.name} for both characters, please select another character.`;
+  }
+
   // check same values between characters
   const sameHomeworld =
     character1.homeworld === character2.homeworld ? [character1.homeworld] : [];
@@ -35,20 +39,27 @@ export const compare = (character1, character2, films) => {
   );
 
   // removes any duplicate films
-  const sameFilms = {
+  let sameFilms = {
     ...filmsWithSamePlanet,
     ...filmsWithSameStarship,
     ...filmsWithSameVehicle,
   };
-
-  // format string
-  let result = `${character1.name} and ${character2.name} were seen together in`;
-  for (let key in sameFilms) {
-    result += ` ${key}`;
+  sameFilms = Object.keys(sameFilms);
+  // format string if characters had same film
+  if (sameFilms.length) {
+    let result = `${character1.name} and ${character2.name} were seen together in`;
+    for (let i = 0; i < sameFilms.length; i++) {
+      if (i !== sameFilms.length - 1) {
+        result += ` ${sameFilms[i]},`;
+      } else {
+        result += ` and ${sameFilms[i]}.`;
+      }
+    }
+    return result;
+  } else {
+    return `${character1.name} and ${character2.name} were not seen together in any film.`;
   }
-  result += ".";
-  console.log(result);
-  return result;
+  
 };
 
 // compareValues goes through each film, each value, and and each character name to see if its a match for the same Film

@@ -1,0 +1,31 @@
+.loading-logo {
+  position: relative;
+  img {
+      width: 20%;
+      height: auto;
+      filter: grayscale(100%);
+  }
+  .loading-text {
+    color: $yellow;
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 55px;
+    font-weight: 900;
+  }
+}
+
+.rotate {
+  animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
