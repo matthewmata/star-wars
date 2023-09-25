@@ -1,11 +1,92 @@
-.select {
-    background-color: rgba($black, 0.5);
+.selected-characters {
+  .image-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  .character {
+    position: relative;
+  }
+
+  h3 {
+    text-align: center;
+    color: $yellow;
+    font-size: 50px;
+    border-bottom: 3px solid $yellow;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+
+  img {
+    width: 271px;
+    height: 271px;
+    object-fit: cover;
+    border: 1px solid $white;
+  }
 }
 
 .same-films {
-    p {
-        text-align: center;
-        width: 50%;
-        font-size: 35px;
+  padding: 12px;
+  p {
+    min-height: 47px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 5px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid $white;
+  cursor: pointer;
+
+  img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    &:hover {
+      filter: brightness(0.7);
     }
+  }
+}
+
+.selected-character1 {
+  outline: 1px solid $blue;
+  border: 1px solid $blue;
+}
+
+.selected-character2 {
+  outline: 1px solid $red;
+  border: 1px solid $red;
+}
+
+.selected-same-character {
+  outline: 1px solid $purple;
+  border: 1px solid $purple;
+}
+
+.overlay-text {
+  position: absolute; /* Position the child element absolutely */
+  bottom: 0;
+  font-weight: 800;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  background-color: rgba($black, 0.5);
+  user-select: none;
 }

@@ -57,9 +57,8 @@ export const compare = (character1, character2, films) => {
     }
     return result;
   } else {
-    return `${character1.name} and ${character2.name} were not seen together in any film.`;
+    return `${character1.name} and ${character2.name} did not share a planet, starship, or vehicle.`;
   }
-  
 };
 
 // compareValues goes through each film, each value, and and each character name to see if its a match for the same Film

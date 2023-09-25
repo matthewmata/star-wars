@@ -1,22 +1,31 @@
 .logo {
+  // save space when loading images, otherwise you see a shift
+  padding-bottom: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    position: absolute;
+    top: 0;
     width: 50%;
     height: auto;
+  }
 }
 
 .how-to-use {
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba($black, 0.5);
-    padding: 12px;
-    
-    h3 {
-        color: $yellow;
-        font-size: 50px;
-        border-bottom: 3px solid $yellow;
-        margin-bottom: 12px;
-        font-weight: 700;
-    }
-    p {
-        font-size: 20px;
-    }
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+
+  h3 {
+    color: $yellow;
+    font-size: 50px;
+    border-bottom: 3px solid $yellow;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  p {
+    font-weight: 600;
+    font-size: 20px;
+  }
 }

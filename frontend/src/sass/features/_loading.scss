@@ -1,9 +1,11 @@
 .loading-logo {
   position: relative;
+  overflow: hidden;
   img {
-      width: 20%;
-      height: auto;
-      filter: grayscale(100%);
+    max-width: 400px;
+    width: 20%;
+    height: auto;
+    filter: grayscale(100%);
   }
   .loading-text {
     color: $yellow;

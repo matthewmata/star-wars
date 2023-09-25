@@ -1,4 +1,4 @@
-import loadingLogo from "../../images/loading-logo2.png";
+import loadingLogo from "../../images/loading-logo.png";
 
 const Loading = () => {
   return (

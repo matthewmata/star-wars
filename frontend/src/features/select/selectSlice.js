@@ -4,7 +4,7 @@ import { compare } from "../../utils/compare";
 const initialState = {
   films: [],
   people: [],
-  sameFilms: ''
+  sameFilms: "",
 };
 
 const selectSlice = createSlice({
@@ -20,13 +20,14 @@ const selectSlice = createSlice({
       state.people.push(...people);
     },
     charactersCompared(state, action) {
-      const { character1 , character2 } = action.payload;
+      const { character1, character2 } = action.payload;
       const sameFilms = compare(character1, character2, state.films);
       state.sameFilms = sameFilms;
-    }
+    },
   },
 });
 
-export const { filmsAdded, peopleAdded, charactersCompared } = selectSlice.actions;
+export const { filmsAdded, peopleAdded, charactersCompared } =
+  selectSlice.actions;
 
 export default selectSlice.reducer;
