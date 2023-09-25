@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server",
+    "node-server": "node server",
+    "react-dev-server": "npx webpack serve",
     "build": "webpack --mode=development"
   },
   "keywords": [],
