@@ -13,23 +13,27 @@ const SelectedCharacters = ({ character1, character2 }) => {
   const character2Name = character2 ? character2.name : "Pick A Character";
 
   return (
-    <div>
+    <>
       <div className="selected-characters">
         <div className="character">
           <h3>Character 1</h3>
-          <img src={character1Image} alt={character1Name} />
+          <div className="character-image">
+            <img src={character1Image} alt={character1Name} />
+          </div>
           <div className="overlay-text">{character1Name}</div>
         </div>
         <div className="character">
           <h3>Character 2</h3>
-          <img src={character2Image} alt={character2Name} />
+          <div className="character-image">
+            <img src={character2Image} alt={character2Name} />
+          </div>
           <div className="overlay-text">{character2Name}</div>
         </div>
       </div>
       <div className="same-films center">
         <p>{selectedBothFilms}</p>
       </div>
-    </div>
+    </>
   );
 };
 

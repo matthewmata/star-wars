@@ -3,11 +3,11 @@ import Select from "../features/select/Select";
 
 const App = () => {
   return (
-    <div>
+    <>
       <div className="overlay"></div>
       <Header />
       <Select />
-    </div>
+    </>
   );
 };
 

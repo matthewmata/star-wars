@@ -4,12 +4,17 @@ header {
 
 .logo {
   padding-bottom: 25%; // save space when loading images, otherwise you see a shift
-  
+  @media (min-width: 1500px) {
+      padding-bottom: 22%
+  }
   img {
     position: absolute;
     top: 0;
     width: 50%;
     height: auto;
+    @media (min-width: 1500px) {
+      width: 45%;
+    }
   }
 }
 
@@ -23,12 +28,24 @@ header {
     margin-bottom: 12px;
     border-bottom: 3px solid $yellow;
     color: $yellow;
-    font-size: 50px;
+    font-size: 21px;
     font-weight: 700;
+
+    @media (min-width: 480px) {
+      font-size: 50px;
+    }
   }
 
   p {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
+    text-align: center;
+
+    @media (min-width: 480px) {
+      font-size: 20px;
+    }
+    @media (min-width: 1025px) {
+      font-size: 25px;
+    }
   }
 }

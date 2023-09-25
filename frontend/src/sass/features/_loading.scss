@@ -1,13 +1,15 @@
 .loading-logo {
   position: relative;
   overflow: hidden; // handles logo spinning
+  padding-bottom: 20px;
 
   img {
-    width: 20%;
+    width: 25%;
     height: auto;
-    max-width: 400px;
+    min-width: 125px;
+    max-width: 350px;
   }
-  
+
   .loading-text {
     position: absolute;
     top: 50%;
@@ -15,8 +17,15 @@
     transform: translate(-50%, -50%);
     color: $yellow;
     align-items: center;
-    font-size: 55px;
+    font-size: 25px;
     font-weight: 900;
+
+    @media (min-width: 480px) {
+      font-size: 35px;
+    }
+    @media (min-width: 769px) {
+      font-size: 55px;
+    }
   }
 }
 
