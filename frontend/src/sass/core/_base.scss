@@ -1,11 +1,10 @@
 body {
+  background-image: url("/frontend/src/images/space-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   background-color: $black;
   color: $white;
   height: 100vh;
-  background-image: url("/frontend/src/images/space-background.jpg");
-  background-size: cover;
-  background-repeat: repeat;
-  background-attachment: fixed;
 }
 
 .center {

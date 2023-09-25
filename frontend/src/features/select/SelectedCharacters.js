@@ -13,8 +13,8 @@ const SelectedCharacters = ({ character1, character2 }) => {
   const character2Name = character2 ? character2.name : "Pick A Character";
 
   return (
-    <div className="selected-characters">
-      <div className="image-container">
+    <div>
+      <div className="selected-characters">
         <div className="character">
           <h3>Character 1</h3>
           <img src={character1Image} alt={character1Name} />

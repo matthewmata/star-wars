@@ -44,8 +44,8 @@ export const compare = (character1, character2, films) => {
     ...filmsWithSameStarship,
     ...filmsWithSameVehicle,
   };
-  sameFilms = Object.keys(sameFilms);
   // format string if characters had same film
+  sameFilms = Object.keys(sameFilms);
   if (sameFilms.length) {
     let result = `${character1.name} and ${character2.name} were seen together in`;
     for (let i = 0; i < sameFilms.length; i++) {

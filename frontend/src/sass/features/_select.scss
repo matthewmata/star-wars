@@ -1,21 +1,20 @@
 .selected-characters {
-  .image-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-bottom: 10px;
-  }
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 10px;
+}
 
-  .character {
-    position: relative;
-  }
+.character {
+  position: relative;
 
   h3 {
-    text-align: center;
-    color: $yellow;
-    font-size: 50px;
     border-bottom: 3px solid $yellow;
     margin-bottom: 12px;
+    color: $yellow;
+    text-align: center;
+    font-size: 50px;
     font-weight: 700;
   }
 
@@ -48,10 +47,10 @@
 
 .grid-item {
   width: 100%;
-  padding-bottom: 100%;
   position: relative;
-  overflow: hidden;
+  padding-bottom: 100%;
   border: 1px solid $white;
+  overflow: hidden;
   cursor: pointer;
 
   img {
@@ -81,12 +80,12 @@
 }
 
 .overlay-text {
-  position: absolute; /* Position the child element absolutely */
-  bottom: 0;
-  font-weight: 800;
   width: 100%;
+  position: absolute;
+  bottom: 0;
   padding: 12px;
+  font-weight: 800;
   text-align: center;
   background-color: rgba($black, 0.5);
-  user-select: none;
+  user-select: none; // makes user not able to select text
 }

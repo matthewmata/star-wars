@@ -5,18 +5,18 @@ import { photos } from "../../utils/pictureLinks";
 export const starWarsApi = createApi({
   reducerPath: "starWarsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000",
+    baseUrl: "http://localhost:5000/api/star-wars",
   }),
   endpoints: (build) => ({
     getFilms: build.query({
-      query: () => "/api/star-wars/films",
+      query: () => "/films",
       async onQueryStarted(arg, { dispatch, queryFulfilled }) {
         const { data } = await queryFulfilled;
         dispatch(filmsAdded(data));
       },
     }),
     getPeople: build.query({
-      query: () => "/api/star-wars/people",
+      query: () => "/people",
       transformResponse: (responseData) => {
         return responseData.map((character) => {
           character.image = photos[character.name];

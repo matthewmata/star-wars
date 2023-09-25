@@ -1,19 +1,20 @@
 .loading-logo {
   position: relative;
-  overflow: hidden;
+  overflow: hidden; // handles logo spinning
+
   img {
-    max-width: 400px;
     width: 20%;
     height: auto;
-    filter: grayscale(100%);
+    max-width: 400px;
   }
+  
   .loading-text {
-    color: $yellow;
     position: absolute;
-    align-items: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: $yellow;
+    align-items: center;
     font-size: 55px;
     font-weight: 900;
   }
