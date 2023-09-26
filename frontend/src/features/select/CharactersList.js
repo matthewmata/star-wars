@@ -16,10 +16,10 @@ const CharactersList = ({
 
   return (
     <div className="grid-container">
-      {people.map((person, index) => (
+      {people.map((person) => (
         <div
           className={`grid-item ${colorSelectHandler(person)}`}
-          key={index}
+          key={person.id}
           onClick={() => characterSelectHandler(person)}
         >
           <img src={person.image} alt={person.name}></img>

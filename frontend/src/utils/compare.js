@@ -1,4 +1,4 @@
-// compareCharacter checks if the two have shared a planet, starship or vehicle before, and returns an object with the movie(s) names where such interactions occurred
+// compareCharacter checks if the two have shared a planet, starship or vehicle before, and returns a string with the movie(s) names where such interactions occurred
 
 export const compare = (character1, character2, films) => {
   if (character1 === character2) {
