@@ -19,7 +19,7 @@ export const starWarsApi = createApi({
     getPeople: build.query({
       query: () => "/people",
       transformResponse: (responseData) => {
-        return responseData.map((character, index) => {
+        return responseData.map((character) => {
           character.image = photos[character.name];
           character.id = uuidv4();
           return character;

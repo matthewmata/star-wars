@@ -1,4 +1,4 @@
-// not great since if the asset is deleted then png crashes
+// not great since if the asset is deleted then picture doesnt load
 export const photos = {
   "Luke Skywalker":
     "https://static.wikia.nocookie.net/star-wars-original-trilogy/images/f/f5/Skywalker_luke.jpg",
